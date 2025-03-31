@@ -1,6 +1,0 @@
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
