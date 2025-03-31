@@ -68,13 +68,34 @@
         {
             currentRoom = RoomName;
             roomInput = RoomName;
-            await JoinRoom();
+            // We need to wait a moment to ensure the connection is established
+            if (hubConnection.State == HubConnectionState.Connected)
+            {
+                await JoinRoom();
+            }
+            else
+            {
+                hubConnection.Closed += async (error) =>
+                {
+                    await Task.Delay(new Random().Next(0, 5) * 1000);
+                    await hubConnection.StartAsync();
+                };
+                
+                // Add a handler for when connection is established
+                hubConnection.StateChanged += async (state) =>
+                {
+                    if (state.NewState == HubConnectionState.Connected && !string.IsNullOrEmpty(roomInput))
+                    {
+                        await JoinRoom();
+                    }
+                };
+            }
         }
     }
 
     private async Task JoinRoom()
     {
-        if (hubConnection is not null && !string.IsNullOrEmpty(roomInput))
+        if (hubConnection is not null && !string.IsNullOrEmpty(roomInput) && hubConnection.State == HubConnectionState.Connected)
         {
             // Leave current room if any
             if (!string.IsNullOrEmpty(currentRoom))
@@ -89,7 +110,10 @@
             messages.Add($"You joined room: {currentRoom}");
             
             // Update URL without reloading the page
-            Navigation.NavigateTo($"/chat/{currentRoom}", false);
+            if (currentRoom != RoomName)
+            {
+                Navigation.NavigateTo($"/chat/{currentRoom}", false);
+            }
         }
     }
 
