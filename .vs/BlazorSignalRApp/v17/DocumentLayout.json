@@ -98,8 +98,7 @@
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:30:09.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T03:30:09.972Z"
             },
             {
               "$type": "Document",
@@ -109,7 +108,7 @@
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAG4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAmwFkAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-16T03:31:02.696Z",
               "EditorCaption": ""
@@ -124,8 +123,7 @@
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:29:57.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T03:29:57.826Z"
             }
           ]
         }

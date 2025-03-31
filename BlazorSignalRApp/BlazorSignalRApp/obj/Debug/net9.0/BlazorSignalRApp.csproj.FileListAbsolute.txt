@@ -95,7 +95,6 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\stati
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.BlazorSignalRApp.props
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.BlazorSignalRApp.props
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\staticwebassets.pack.json
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSi.3E1DCFEF.Up2Date
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.dll
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\refint\BlazorSignalRApp.dll
@@ -103,3 +102,4 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\Blazo
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.genruntimeconfig.cache
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\ref\BlazorSignalRApp.dll
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.sourcelink.json
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

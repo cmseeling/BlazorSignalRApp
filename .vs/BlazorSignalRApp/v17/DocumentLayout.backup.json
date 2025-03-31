@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\dev\\BlazorSignalRApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -98,34 +98,32 @@
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:30:09.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T03:30:09.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Chat.razor",
               "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAADgAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFkAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-16T03:31:02.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
-              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs*",
-              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACHAAAAAAAAAA==",
+              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:29:57.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T03:29:57.826Z"
             }
           ]
         }
