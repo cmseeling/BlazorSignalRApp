@@ -1,7 +1,5 @@
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.utcp4yuo2x.pdb
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.61hlt0tpw1.wasm
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.js
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.js.map
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.8bti36lthm.js
@@ -360,14 +358,12 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.9j9suo3916.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Xml.XmlSerializer.0djf5ei3zy.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Collections.Concurrent.aos1w28dak.wasm.gz
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.61hlt0tpw1.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.8bti36lthm.js.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.ComponentModel.EventBasedAsync.thm3r1qmen.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.TypeExtensions.3cavfw6ggz.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.js.map.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Net.ServicePoint.0zpaewrp5z.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Net.NameResolution.mpnqjoza32.wasm.gz
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.utcp4yuo2x.pdb.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.Primitives.un27ocukhl.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.Net.WebClient.l2vieztfoi.wasm.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\System.IO.Pipes.viel7aptuc.wasm.gz
@@ -1059,9 +1055,6 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\oepk7gpaff-tjcz0u77k5.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\g3trqla9j0-tptq2av103.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\utvbxqb0u9-lfu7j35m59.gz
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\p5dje67dpb-61hlt0tpw1.gz
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\qncuiel9xv-utcp4yuo2x.gz
-D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\xteuqltjvz-9218e7bdj7.gz
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.json
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.development.json
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1077,3 +1070,11 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\refint\BlazorSignalRApp.Client.dll
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\BlazorSignalRApp.Client.pdb
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\ref\BlazorSignalRApp.Client.dll
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\BlazorSignalRApp.Client.sourcelink.json
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.e4rnudukgv.pdb
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.e54iwuakq2.wasm
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.e54iwuakq2.wasm.gz
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\bin\Debug\net9.0\wwwroot\_framework\BlazorSignalRApp.Client.e4rnudukgv.pdb.gz
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\p5dje67dpb-e54iwuakq2.gz
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\qncuiel9xv-e4rnudukgv.gz
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net9.0\compressed\xteuqltjvz-1snmhdkvo5.gz

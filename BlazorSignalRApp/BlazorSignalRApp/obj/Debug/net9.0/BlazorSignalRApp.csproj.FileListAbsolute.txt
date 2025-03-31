@@ -102,3 +102,4 @@ D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\refin
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.pdb
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.genruntimeconfig.cache
 D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\ref\BlazorSignalRApp.dll
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp\obj\Debug\net9.0\BlazorSignalRApp.sourcelink.json
