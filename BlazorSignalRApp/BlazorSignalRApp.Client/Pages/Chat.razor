@@ -1,7 +1,10 @@
 ﻿@page "/chat"
 @rendermode InteractiveWebAssembly
+@using BlazorSignalRApp.Shared
+@using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
+@implements IAsyncDisposable
 
 <PageTitle>Chat</PageTitle>
 
@@ -13,15 +16,44 @@
 		<input @bind="userName" />
 	</label>
 </div>
-<label>
-	Room:
-	<input @bind="roomId" />
-</label>
-<button @onclick="JoinRoom">Join Room</button>
+<div class="form-group">
+	<label>
+		Language:
+		<input @bind="language" />
+	</label>
+</div>
+<div class="form-group">
+	<label>
+		Type:
+		<select @bind="type">
+			<option value=""></option>
+			<option value="helper">Helper</option>
+			<option value="user">User</option>
+		</select>
+	</label>
+</div>
+<button @onclick="LookForMatch">Match with someone</button>
 
 @code {
 	private string? userName;
-	private string? roomId;
+	private string? language;
+	private string? type;
+	private HubConnection? hubConnection;
+
+	protected override async Task OnInitializedAsync()
+	{
+		hubConnection = new HubConnectionBuilder()
+			.WithUrl(Navigation.ToAbsoluteUri("/matchhub"))
+			.Build();
+
+		hubConnection.On<string, string>("Matched", (sender, roomId) =>
+		{
+			// InvokeAsync(StateHasChanged);
+			Navigation.NavigateTo($"/chat/{roomId}", false);
+		});
+
+		await hubConnection.StartAsync();
+	}
 
 	protected override async Task OnAfterRenderAsync(bool firstRender)
 	{
@@ -37,12 +69,24 @@
 		}
 	}
 
-	private void JoinRoom()
+	private async Task LookForMatch()
 	{
 		// Update URL without reloading the page
-		if (!string.IsNullOrWhiteSpace(roomId))
+		if (hubConnection is not null && !string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(language) && !string.IsNullOrWhiteSpace(language))
 		{
-			Navigation.NavigateTo($"/chat/{roomId}", false);
+			System.Console.WriteLine($"Looking for match with values: {userName}, {language}, {type}");
+			var userType = type == "helper" ? UserType.Helper : UserType.User;
+			await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userName);
+			await hubConnection.SendAsync("JoinQueue", userType, language);
+		}
+	}
+
+	public async ValueTask DisposeAsync()
+	{
+		if (hubConnection is not null)
+		{
+			await hubConnection.SendAsync("LeaveQueue", type, language);
+			await hubConnection.DisposeAsync();
 		}
 	}
 }

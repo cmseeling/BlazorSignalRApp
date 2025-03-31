@@ -5,7 +5,7 @@
 @inject IJSRuntime JSRuntime
 @implements IAsyncDisposable
 
-<PageTitle>Chat @(string.IsNullOrEmpty(RoomName) ? "" : $"- {RoomName}")</PageTitle>
+<PageTitle>Chat @(string.IsNullOrWhiteSpace(RoomName) ? "" : $"- {RoomName}")</PageTitle>
 
 <div class="form-group">
     <label>
@@ -22,6 +22,10 @@
 <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
 
 <hr>
+
+<button @onclick="Disconnect">Disconnect</button>
+
+<hr />
 
 <ul id="messagesList">
     @foreach (var message in messages)
@@ -58,7 +62,7 @@
         hubConnection.Reconnected += connectionId =>
         {
             messages.Add("Connection reestablished.");
-            if (!string.IsNullOrEmpty(RoomName))
+            if (!string.IsNullOrWhiteSpace(RoomName))
             {
                 _ = JoinRoom(RoomName); // Rejoin the room after reconnection
             }
@@ -89,7 +93,7 @@
         }
 
         // If RoomName is provided in the URL, join that room
-        if (!string.IsNullOrEmpty(RoomName))
+        if (!string.IsNullOrWhiteSpace(RoomName))
         {
             // We need to wait a moment to ensure the connection is established
             if (hubConnection.State == HubConnectionState.Connected)
@@ -108,7 +112,7 @@
                 // Add a handler for when connection is established
                 hubConnection.On("Connected", async () => 
                 {
-                    if (!string.IsNullOrEmpty(RoomName))
+                    if (!string.IsNullOrWhiteSpace(RoomName))
                     {
                         await JoinRoom(RoomName);
                     }
@@ -121,18 +125,6 @@
     {
         if (hubConnection is not null && hubConnection.State == HubConnectionState.Connected)
         {
-            // Leave current room if any
-            // if (!string.IsNullOrEmpty(currentRoom))
-            // {
-            //     await hubConnection.SendAsync("LeaveRoom", currentRoom);
-            //     messages.Add($"You left room: {currentRoom}");
-            // }
-
-            // Save username to local storage
-            // if (!string.IsNullOrEmpty(userName))
-            // {
-            //     await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userName);
-            // }
 
             // Join new room
             await hubConnection.SendAsync("JoinRoom", RoomName, userName ?? "Anonymous");
@@ -142,17 +134,30 @@
 
     private async Task Send()
     {
-        if (hubConnection is not null && !string.IsNullOrEmpty(RoomName))
+        if (hubConnection is not null && !string.IsNullOrWhiteSpace(RoomName))
         {
             await hubConnection.SendAsync("SendMessage", userName ?? "Anonymous", messageInput, RoomName);
             messageInput = string.Empty; // Clear message input after sending
         }
     }
 
+	private async Task Disconnect()
+	{
+        // Leave current room if any
+        if (hubConnection is not null && !string.IsNullOrWhiteSpace(RoomName))
+        {
+            await hubConnection.SendAsync("LeaveRoom", RoomName);
+            messages.Add($"You left room: {RoomName}");
+        }
+
+        Navigation.NavigateTo($"/chat", false);
+	}
+
     public async ValueTask DisposeAsync()
     {
         if (hubConnection is not null)
         {
+            await hubConnection.SendAsync("LeaveRoom", RoomName);
             await hubConnection.DisposeAsync();
         }
     }

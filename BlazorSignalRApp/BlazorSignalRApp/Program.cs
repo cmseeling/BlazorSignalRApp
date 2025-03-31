@@ -2,6 +2,7 @@ using BlazorSignalRApp.Client.Pages;
 using BlazorSignalRApp.Components;
 using Microsoft.AspNetCore.ResponseCompression;
 using BlazorSignalRApp.Hubs;
+using BlazorSignalRApp.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ builder.Services.AddResponseCompression(opts =>
     opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
         ["application/octet-stream"]);
 });
+
+builder.Services.AddSingleton<Dictionary<string, LanguageQueue>>();
 
 var app = builder.Build();
 
@@ -46,5 +49,6 @@ app.MapRazorComponents<App>()
     .AddAdditionalAssemblies(typeof(BlazorSignalRApp.Client._Imports).Assembly);
 
 app.MapHub<ChatHub>("/chathub");
+app.MapHub<MatchHub>("/matchhub");
 
 app.Run();
