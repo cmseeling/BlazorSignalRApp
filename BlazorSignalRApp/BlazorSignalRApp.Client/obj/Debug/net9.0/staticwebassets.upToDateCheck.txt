@@ -1,0 +1,4 @@
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\wwwroot\appsettings.json
+D:\dev\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\wwwroot\appsettings.Development.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json
