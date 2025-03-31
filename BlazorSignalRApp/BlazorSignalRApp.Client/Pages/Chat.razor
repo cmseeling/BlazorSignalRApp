@@ -51,9 +51,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Load username from local storage
-        userInput = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chatUserName");
-        
         hubConnection = new HubConnectionBuilder()
             .WithUrl(Navigation.ToAbsoluteUri("/chathub"))
             .Build();
@@ -83,6 +80,20 @@
         };
 
         await hubConnection.StartAsync();
+        
+        // Load username from local storage after connection is established
+        // This avoids JavaScript interop during server-side rendering
+        if (hubConnection.State == HubConnectionState.Connected)
+        {
+            try
+            {
+                userInput = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chatUserName");
+            }
+            catch
+            {
+                // Ignore errors during JS interop
+            }
+        }
 
         // If RoomName is provided in the URL, join that room
         if (!string.IsNullOrEmpty(RoomName))
