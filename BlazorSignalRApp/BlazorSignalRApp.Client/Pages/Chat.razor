@@ -1,11 +1,19 @@
 ﻿@page "/chat"
+@page "/chat/{RoomName}"
 @rendermode InteractiveWebAssembly
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager Navigation
 @implements IAsyncDisposable
 
-<PageTitle>Chat</PageTitle>
+<PageTitle>Chat @(string.IsNullOrEmpty(RoomName) ? "" : $"- {RoomName}")</PageTitle>
 
+<div class="form-group">
+    <label>
+        Room:
+        <input @bind="roomInput" />
+    </label>
+    <button @onclick="JoinRoom" disabled="@(!IsConnected)">Join Room</button>
+</div>
 <div class="form-group">
     <label>
         User:
@@ -30,10 +38,15 @@
 </ul>
 
 @code {
+    [Parameter]
+    public string? RoomName { get; set; }
+
     private HubConnection? hubConnection;
     private List<string> messages = [];
     private string? userInput;
     private string? messageInput;
+    private string? roomInput;
+    private string? currentRoom;
 
     protected override async Task OnInitializedAsync()
     {
@@ -49,13 +62,42 @@
         });
 
         await hubConnection.StartAsync();
+
+        // If RoomName is provided in the URL, join that room
+        if (!string.IsNullOrEmpty(RoomName))
+        {
+            currentRoom = RoomName;
+            roomInput = RoomName;
+            await JoinRoom();
+        }
+    }
+
+    private async Task JoinRoom()
+    {
+        if (hubConnection is not null && !string.IsNullOrEmpty(roomInput))
+        {
+            // Leave current room if any
+            if (!string.IsNullOrEmpty(currentRoom))
+            {
+                await hubConnection.SendAsync("LeaveRoom", currentRoom);
+                messages.Add($"You left room: {currentRoom}");
+            }
+
+            // Join new room
+            await hubConnection.SendAsync("JoinRoom", roomInput);
+            currentRoom = roomInput;
+            messages.Add($"You joined room: {currentRoom}");
+            
+            // Update URL without reloading the page
+            Navigation.NavigateTo($"/chat/{currentRoom}", false);
+        }
     }
 
     private async Task Send()
     {
-        if (hubConnection is not null)
+        if (hubConnection is not null && !string.IsNullOrEmpty(currentRoom))
         {
-            await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+            await hubConnection.SendAsync("SendMessage", userInput, messageInput, currentRoom);
         }
     }
 
