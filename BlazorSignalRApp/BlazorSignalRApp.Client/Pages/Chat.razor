@@ -3,6 +3,7 @@
 @rendermode InteractiveWebAssembly
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
 @implements IAsyncDisposable
 
 <PageTitle>Chat @(string.IsNullOrEmpty(RoomName) ? "" : $"- {RoomName}")</PageTitle>
