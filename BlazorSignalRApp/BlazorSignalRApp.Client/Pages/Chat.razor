@@ -50,6 +50,9 @@
 
     protected override async Task OnInitializedAsync()
     {
+        // Load username from local storage
+        userInput = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chatUserName");
+        
         hubConnection = new HubConnectionBuilder()
             .WithUrl(Navigation.ToAbsoluteUri("/chathub"))
             .Build();
@@ -121,8 +124,14 @@
                 messages.Add($"You left room: {currentRoom}");
             }
 
+            // Save username to local storage
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userInput);
+            }
+
             // Join new room
-            await hubConnection.SendAsync("JoinRoom", roomInput);
+            await hubConnection.SendAsync("JoinRoom", roomInput, userInput ?? "Anonymous");
             currentRoom = roomInput;
             messages.Add($"You joined room: {currentRoom}");
             
@@ -138,7 +147,14 @@
     {
         if (hubConnection is not null && !string.IsNullOrEmpty(currentRoom))
         {
-            await hubConnection.SendAsync("SendMessage", userInput, messageInput, currentRoom);
+            // Save username to local storage when sending a message
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userInput);
+            }
+            
+            await hubConnection.SendAsync("SendMessage", userInput ?? "Anonymous", messageInput, currentRoom);
+            messageInput = string.Empty; // Clear message input after sending
         }
     }
 
