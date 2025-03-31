@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\dev\\BlazorSignalRApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp.client\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F59A5FDE-6E6D-4E9D-84EA-A98152E33AD4}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|d:\\dev\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp.client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51C5062-8FE0-4C26-A8AD-F9748AC1103B}|BlazorSignalRApp\\BlazorSignalRApp.Client\\BlazorSignalRApp.Client.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp.client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +42,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "MatchController.cs",
+              "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Controllers\\MatchController.cs",
+              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Controllers\\MatchController.cs",
+              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Controllers\\MatchController.cs",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Controllers\\MatchController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:25:55.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\Weather.razor",
+              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\Weather.razor",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T05:09:17.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\App.razor",
+              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\App.razor",
+              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\App.razor",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T05:00:51.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Counter.razor",
+              "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Counter.razor",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T05:00:13.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-16T03:31:25.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Chat.razor",
               "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp.Client\\Pages\\Chat.razor",
-              "ViewState": "AgIAABUAAAAAAAAAAAAqwCAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-16T03:31:02.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
               "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
               "ToolTip": "D:\\dev\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:30:09.972Z"
+              "WhenOpened": "2025-02-16T03:30:09.972Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +145,8 @@
               "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Hubs\\ChatHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T03:29:57.826Z"
+              "WhenOpened": "2025-02-16T03:29:57.826Z",
+              "EditorCaption": ""
             }
           ]
         }

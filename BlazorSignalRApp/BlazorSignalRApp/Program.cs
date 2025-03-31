@@ -5,6 +5,8 @@ using BlazorSignalRApp.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers(); //added for API
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
