@@ -61,6 +61,23 @@
             InvokeAsync(StateHasChanged);
         });
 
+        // Set up connection state monitoring
+        hubConnection.Reconnecting += error =>
+        {
+            messages.Add("Connection lost. Attempting to reconnect...");
+            return Task.CompletedTask;
+        };
+
+        hubConnection.Reconnected += connectionId =>
+        {
+            messages.Add("Connection reestablished.");
+            if (!string.IsNullOrEmpty(currentRoom))
+            {
+                _ = JoinRoom(); // Rejoin the room after reconnection
+            }
+            return Task.CompletedTask;
+        };
+
         await hubConnection.StartAsync();
 
         // If RoomName is provided in the URL, join that room
@@ -82,13 +99,13 @@
                 };
                 
                 // Add a handler for when connection is established
-                hubConnection.StateChanged += async (state) =>
+                hubConnection.On("Connected", async () => 
                 {
-                    if (state.NewState == HubConnectionState.Connected && !string.IsNullOrEmpty(roomInput))
+                    if (!string.IsNullOrEmpty(roomInput))
                     {
                         await JoinRoom();
                     }
-                };
+                });
             }
         }
     }

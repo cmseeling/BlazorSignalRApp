@@ -7,6 +7,8 @@ public class ChatHub : Hub
     public async Task JoinRoom(string roomName)
     {
         await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
+        // Notify the client that they've successfully joined the room
+        await Clients.Caller.SendAsync("ReceiveMessage", "System", $"You have joined the room: {roomName}");
     }
 
     public async Task LeaveRoom(string roomName)
