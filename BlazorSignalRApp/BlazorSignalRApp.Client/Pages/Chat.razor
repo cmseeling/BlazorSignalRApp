@@ -1,183 +1,48 @@
 ﻿@page "/chat"
-@page "/chat/{RoomName}"
 @rendermode InteractiveWebAssembly
-@using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
-@implements IAsyncDisposable
 
-<PageTitle>Chat @(string.IsNullOrEmpty(RoomName) ? "" : $"- {RoomName}")</PageTitle>
+<PageTitle>Chat</PageTitle>
+
+<p>Chat with people</p>
 
 <div class="form-group">
-    <label>
-        Room:
-        <input @bind="roomInput" />
-    </label>
-    <button @onclick="JoinRoom" disabled="@(!IsConnected)">Join Room</button>
+	<label>
+		Username:
+		<input @bind="userName" />
+	</label>
 </div>
-<div class="form-group">
-    <label>
-        User:
-        <input @bind="userInput" />
-    </label>
-</div>
-<div class="form-group">
-    <label>
-        Message:
-        <input @bind="messageInput" size="50" />
-    </label>
-</div>
-<button @onclick="Send" disabled="@(!IsConnected)">Send</button>
-
-<hr>
-
-<ul id="messagesList">
-    @foreach (var message in messages)
-    {
-        <li>@message</li>
-    }
-</ul>
+<label>
+	Room:
+	<input @bind="roomId" />
+</label>
+<button @onclick="JoinRoom">Join Room</button>
 
 @code {
-    [Parameter]
-    public string? RoomName { get; set; }
+	private string? userName;
+	private string? roomId;
 
-    private HubConnection? hubConnection;
-    private List<string> messages = [];
-    private string? userInput;
-    private string? messageInput;
-    private string? roomInput;
-    private string? currentRoom;
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		try
+		{
+			if (string.IsNullOrWhiteSpace(userName)) {
+				userName = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chatUserName");
+			}
+		}
+		catch
+		{
+			// Ignore errors during JS interop
+		}
+	}
 
-    protected override async Task OnInitializedAsync()
-    {
-        hubConnection = new HubConnectionBuilder()
-            .WithUrl(Navigation.ToAbsoluteUri("/chathub"))
-            .Build();
-
-        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
-        {
-            var encodedMsg = $"{user}: {message}";
-            messages.Add(encodedMsg);
-            InvokeAsync(StateHasChanged);
-        });
-
-        // Set up connection state monitoring
-        hubConnection.Reconnecting += error =>
-        {
-            messages.Add("Connection lost. Attempting to reconnect...");
-            return Task.CompletedTask;
-        };
-
-        hubConnection.Reconnected += connectionId =>
-        {
-            messages.Add("Connection reestablished.");
-            if (!string.IsNullOrEmpty(currentRoom))
-            {
-                _ = JoinRoom(); // Rejoin the room after reconnection
-            }
-            return Task.CompletedTask;
-        };
-
-        await hubConnection.StartAsync();
-        
-        // Load username from local storage after connection is established
-        // This avoids JavaScript interop during server-side rendering
-        if (hubConnection.State == HubConnectionState.Connected)
-        {
-            try
-            {
-                userInput = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "chatUserName");
-            }
-            catch
-            {
-                // Ignore errors during JS interop
-            }
-        }
-
-        // If RoomName is provided in the URL, join that room
-        if (!string.IsNullOrEmpty(RoomName))
-        {
-            currentRoom = RoomName;
-            roomInput = RoomName;
-            // We need to wait a moment to ensure the connection is established
-            if (hubConnection.State == HubConnectionState.Connected)
-            {
-                await JoinRoom();
-            }
-            else
-            {
-                hubConnection.Closed += async (error) =>
-                {
-                    await Task.Delay(new Random().Next(0, 5) * 1000);
-                    await hubConnection.StartAsync();
-                };
-                
-                // Add a handler for when connection is established
-                hubConnection.On("Connected", async () => 
-                {
-                    if (!string.IsNullOrEmpty(roomInput))
-                    {
-                        await JoinRoom();
-                    }
-                });
-            }
-        }
-    }
-
-    private async Task JoinRoom()
-    {
-        if (hubConnection is not null && !string.IsNullOrEmpty(roomInput) && hubConnection.State == HubConnectionState.Connected)
-        {
-            // Leave current room if any
-            if (!string.IsNullOrEmpty(currentRoom))
-            {
-                await hubConnection.SendAsync("LeaveRoom", currentRoom);
-                messages.Add($"You left room: {currentRoom}");
-            }
-
-            // Save username to local storage
-            if (!string.IsNullOrEmpty(userInput))
-            {
-                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userInput);
-            }
-
-            // Join new room
-            await hubConnection.SendAsync("JoinRoom", roomInput, userInput ?? "Anonymous");
-            currentRoom = roomInput;
-            messages.Add($"You joined room: {currentRoom}");
-            
-            // Update URL without reloading the page
-            if (currentRoom != RoomName)
-            {
-                Navigation.NavigateTo($"/chat/{currentRoom}", false);
-            }
-        }
-    }
-
-    private async Task Send()
-    {
-        if (hubConnection is not null && !string.IsNullOrEmpty(currentRoom))
-        {
-            // Save username to local storage when sending a message
-            if (!string.IsNullOrEmpty(userInput))
-            {
-                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "chatUserName", userInput);
-            }
-            
-            await hubConnection.SendAsync("SendMessage", userInput ?? "Anonymous", messageInput, currentRoom);
-            messageInput = string.Empty; // Clear message input after sending
-        }
-    }
-
-    public bool IsConnected =>
-        hubConnection?.State == HubConnectionState.Connected;
-
-    public async ValueTask DisposeAsync()
-    {
-        if (hubConnection is not null)
-        {
-            await hubConnection.DisposeAsync();
-        }
-    }
+	private void JoinRoom()
+	{
+		// Update URL without reloading the page
+		if (!string.IsNullOrWhiteSpace(roomId))
+		{
+			Navigation.NavigateTo($"/chat/{roomId}", false);
+		}
+	}
 }
