@@ -1,10 +1,21 @@
-using BlazorSignalRApp.Client.Pages;
 using BlazorSignalRApp.Components;
 using Microsoft.AspNetCore.ResponseCompression;
 using BlazorSignalRApp.Hubs;
 using BlazorSignalRApp.Shared;
+using SoloX.BlazorJsonLocalization.ServerSide;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddServerSideJsonLocalization(builder =>
+{
+    builder
+        .AddFallback("Fallback", typeof(BlazorSignalRApp.Client._Imports).Assembly)
+        .UseHttpHostedJson(options =>
+        {
+            options.ResourcesPath = "Resources";
+            options.ApplicationAssemblies = [typeof(_Imports).Assembly, typeof(BlazorSignalRApp.Client._Imports).Assembly];
+        });
+});
 
 builder.Services.AddControllers(); //added for API
 
@@ -40,7 +51,7 @@ else
 
 app.UseHttpsRedirection();
 
-
+app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
