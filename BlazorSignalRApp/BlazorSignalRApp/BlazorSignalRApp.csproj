@@ -10,6 +10,8 @@
     <ProjectReference Include="..\..\BlazorSignalRApp.Shared\BlazorSignalRApp.Shared.csproj" />
     <ProjectReference Include="..\BlazorSignalRApp.Client\BlazorSignalRApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.2" />
+    <PackageReference Include="SoloX.BlazorJsonLocalization" Version="3.0.0-alpha.1" />
+    <PackageReference Include="SoloX.BlazorJsonLocalization.ServerSide" Version="3.0.0-alpha.1" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,12 @@
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
+    <script>
+        window.blazorCulture = {
+          get: () => window.localStorage['BlazorCulture'],
+          set: (value) => window.localStorage['BlazorCulture'] = value
+        };
+    </script>
 </body>
 
 </html>

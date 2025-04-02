@@ -2,6 +2,8 @@
 @rendermode InteractiveWebAssembly
 @using BlazorSignalRApp.Shared
 @using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Chat> Localizer
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 @implements IAsyncDisposable
@@ -12,19 +14,19 @@
 
 <div class="form-group">
 	<label>
-		Username:
+		@Localizer["Username"]:
 		<input @bind="userName" />
 	</label>
 </div>
 <div class="form-group">
 	<label>
-		Language:
+		@Localizer["Language"]:
 		<input @bind="language" />
 	</label>
 </div>
 <div class="form-group">
 	<label>
-		Type:
+		@Localizer["Type"]:
 		<select @bind="type">
 			<option value=""></option>
 			<option value="helper">Helper</option>
@@ -32,7 +34,9 @@
 		</select>
 	</label>
 </div>
-<button @onclick="LookForMatch">Match with someone</button>
+<button @onclick="LookForMatch">
+	@Localizer["MatchMsg"]
+</button>
 
 @code {
 	private string? userName;
